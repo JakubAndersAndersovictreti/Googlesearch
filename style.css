@@ -1,6 +1,7 @@
 /* 
-  Stylopis pro projekt Google Search (CS50 Web + PVA)
+  Stylopis pro projekt Andems Search (PVA & CS50 Web)
   Autor: Jakub Anders
+  Vlastní moderní design vyhledávače
 */
 
 /* --- Základní reset a globální nastavení --- */
@@ -11,9 +12,9 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #202124;
-    background-color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+    background-color: #f8fafc;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -21,11 +22,13 @@ body {
 
 /* Odkazy */
 a {
-    color: #1a0dab;
+    color: #4f46e5;
     text-decoration: none;
+    transition: all 0.2s ease;
 }
 
 a:hover {
+    color: #3730a3;
     text-decoration: underline;
 }
 
@@ -34,32 +37,87 @@ a:hover {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 16px 24px;
-    gap: 18px;
-    font-size: 13px;
-}
-
-.header-nav a {
-    color: #5f6368;
-    transition: color 0.15s ease;
-}
-
-.header-nav a:hover {
-    color: #202124;
-    text-decoration: underline;
-}
-
-.header-nav a.btn-link {
-    background-color: #1a73e8;
-    color: #ffffff;
-    padding: 7px 14px;
-    border-radius: 4px;
+    padding: 18px 32px;
+    gap: 16px;
+    font-size: 14px;
     font-weight: 500;
 }
 
-.header-nav a.btn-link:hover {
-    background-color: #1557b0;
+.header-nav a {
+    color: #475569;
+    padding: 6px 12px;
+    border-radius: 6px;
     text-decoration: none;
+}
+
+.header-nav a:hover {
+    color: #1e293b;
+    background-color: #e2e8f0;
+    text-decoration: none;
+}
+
+/* Zvýrazněný odkaz na portfolio v menu */
+.header-nav a.nav-portfolio-link {
+    background: linear-gradient(135deg, #4f46e5, #6366f1);
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(79, 70, 229, 0.25);
+}
+
+.header-nav a.nav-portfolio-link:hover {
+    background: linear-gradient(135deg, #4338ca, #4f46e5);
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+/* --- Brand Logo (Andems Search) --- */
+.brand-link {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-link:hover {
+    text-decoration: none;
+}
+
+.brand-name {
+    font-size: 54px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    background: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.brand-name.small {
+    font-size: 26px;
+    letter-spacing: -0.5px;
+}
+
+.brand-badge {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #4f46e5;
+    background: #eef2ff;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    border: 1px solid #c7d2fe;
+}
+
+.brand-badge-orange {
+    color: #ea580c;
+    background: #fff7ed;
+    border-color: #fed7aa;
+}
+
+.brand-badge-purple {
+    color: #7c3aed;
+    background: #f5f3ff;
+    border-color: #ddd6fe;
 }
 
 /* --- Hlavní obsah - Vyhledávání --- */
@@ -70,66 +128,52 @@ a:hover {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    margin-top: -60px; /* Vizuální vycentrování loga */
+    margin-top: -40px;
 }
 
-/* Logo */
 .logo-container {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    margin-bottom: 25px;
-    position: relative;
-}
-
-.logo-container img {
-    width: 272px;
-    height: 92px;
-    display: block;
-}
-
-/* Nápis 'obrázky' u Image Search */
-.logo-subscript {
-    color: #4285f4;
-    font-size: 16px;
-    font-weight: 500;
-    margin-left: 6px;
-    margin-bottom: 6px;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 /* Formulář vyhledávání */
 .search-form {
     width: 100%;
-    max-width: 584px;
+    max-width: 620px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* Vyhledávací pole s ikonou */
+/* Moderní vyhledávací pole */
 .search-bar-wrapper {
     width: 100%;
-    height: 46px;
-    border: 1px solid #dfe1e5;
-    border-radius: 24px;
+    height: 52px;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 9999px;
     display: flex;
     align-items: center;
-    padding: 0 16px;
+    padding: 0 20px;
     background-color: #ffffff;
-    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
 }
 
-.search-bar-wrapper:hover,
+.search-bar-wrapper:hover {
+    border-color: #94a3b8;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
 .search-bar-wrapper:focus-within {
-    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
-    border-color: rgba(223, 225, 229, 0);
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.15), 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 
 .search-icon {
-    width: 20px;
-    height: 20px;
-    fill: #9aa0a6;
-    margin-right: 12px;
+    width: 22px;
+    height: 22px;
+    fill: #6366f1;
+    margin-right: 14px;
     flex-shrink: 0;
 }
 
@@ -139,42 +183,62 @@ a:hover {
     border: none;
     outline: none;
     font-size: 16px;
-    color: #202124;
+    color: #0f172a;
     background: transparent;
+    font-family: inherit;
+}
+
+.search-input::placeholder {
+    color: #94a3b8;
 }
 
 /* Tlačítka pod vyhledáváním */
 .buttons-group {
-    margin-top: 24px;
+    margin-top: 28px;
     display: flex;
-    gap: 12px;
+    gap: 14px;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .search-btn {
-    background-color: #f8f9fa;
-    border: 1px solid #f8f9fa;
-    border-radius: 4px;
-    color: #3c4043;
-    font-size: 14px;
-    height: 36px;
-    padding: 0 16px;
-    cursor: pointer;
     font-family: inherit;
-    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    font-size: 14px;
+    font-weight: 600;
+    height: 42px;
+    padding: 0 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
-.search-btn:hover {
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-    background-color: #f8f9fa;
-    border: 1px solid #dadce0;
-    color: #202124;
+/* Primární tlačítko */
+.search-btn-primary {
+    background: linear-gradient(135deg, #4f46e5, #6366f1);
+    color: #ffffff;
+    border: none;
+    box-shadow: 0 2px 6px rgba(79, 70, 229, 0.25);
 }
 
-.search-btn:focus {
-    border: 1px solid #4285f4;
-    outline: none;
+.search-btn-primary:hover {
+    background: linear-gradient(135deg, #4338ca, #4f46e5);
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.35);
+    transform: translateY(-1px);
+}
+
+/* Sekundární tlačítko (Štěstí) */
+.search-btn-secondary {
+    background-color: #ffffff;
+    color: #334155;
+    border: 1px solid #cbd5e1;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.search-btn-secondary:hover {
+    background-color: #f1f5f9;
+    border-color: #94a3b8;
+    color: #0f172a;
+    transform: translateY(-1px);
 }
 
 /* --- Pokročilé vyhledávání (advanced.html) --- */
@@ -182,43 +246,53 @@ a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 30px;
-    border-bottom: 1px solid #ebebeb;
-}
-
-.advanced-header .logo-small img {
-    height: 32px;
-    width: auto;
+    padding: 16px 36px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .advanced-container {
     flex: 1;
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 30px 40px;
+    max-width: 1050px;
+    margin: 30px auto;
+    padding: 0 30px;
     width: 100%;
 }
 
+.advanced-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 32px 36px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
 .advanced-title {
-    color: #d93025;
-    font-size: 20px;
-    font-weight: 400;
-    margin-bottom: 25px;
+    color: #4f46e5;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.advanced-subtitle {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 24px;
 }
 
 .advanced-section-heading {
     font-size: 16px;
-    font-weight: 700;
-    color: #333333;
+    font-weight: 600;
+    color: #0f172a;
     margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #ebebeb;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .advanced-form {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 18px;
 }
 
 .form-row {
@@ -228,9 +302,10 @@ a:hover {
 }
 
 .form-label {
-    width: 200px;
-    font-size: 13px;
-    color: #222222;
+    width: 220px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #334155;
     text-align: left;
     flex-shrink: 0;
 }
@@ -242,80 +317,86 @@ a:hover {
 
 .advanced-text-input {
     width: 100%;
-    height: 30px;
-    padding: 4px 8px;
-    border: 1px solid #d9d9d9;
-    border-radius: 1px;
-    font-size: 13px;
+    height: 38px;
+    padding: 6px 12px;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 14px;
     font-family: inherit;
     outline: none;
     box-sizing: border-box;
+    transition: all 0.2s ease;
 }
 
 .advanced-text-input:focus {
-    border-color: #4d90fe;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
 }
 
 .form-hint {
-    font-size: 12px;
-    color: #777777;
+    font-size: 13px;
+    color: #64748b;
     flex: 1;
 }
 
 .form-hint code {
-    background-color: #f1f3f4;
-    padding: 2px 4px;
-    border-radius: 2px;
-    color: #202124;
+    background-color: #f1f5f9;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #4f46e5;
+    font-weight: 600;
 }
 
 .advanced-btn-row {
     display: flex;
     justify-content: flex-start;
-    margin-left: 220px;
+    margin-left: 240px;
     margin-top: 15px;
 }
 
 .btn-advanced-submit {
-    background-color: #4d90fe;
-    border: 1px solid #3079ed;
+    background: linear-gradient(135deg, #4f46e5, #6366f1);
+    border: none;
     color: #ffffff;
-    font-weight: bold;
-    font-size: 12px;
-    height: 32px;
-    padding: 0 14px;
-    border-radius: 2px;
+    font-weight: 600;
+    font-size: 14px;
+    height: 40px;
+    padding: 0 24px;
+    border-radius: 6px;
     cursor: pointer;
     font-family: inherit;
-    transition: background-color 0.15s ease;
+    box-shadow: 0 2px 6px rgba(79, 70, 229, 0.25);
+    transition: all 0.2s ease;
 }
 
 .btn-advanced-submit:hover {
-    background-color: #357ae8;
+    background: linear-gradient(135deg, #4338ca, #4f46e5);
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.35);
+    transform: translateY(-1px);
 }
 
 /* --- Stránka s přehledem formulářů (forms.html) --- */
 .forms-page-container {
     flex: 1;
-    max-width: 900px;
-    margin: 20px auto 40px auto;
+    max-width: 960px;
+    margin: 25px auto 45px auto;
     padding: 0 20px;
     width: 100%;
 }
 
 .notice-banner {
-    background-color: #e8f0fe;
-    border: 1px solid #d2e3fc;
-    color: #1967d2;
-    padding: 14px 18px;
-    border-radius: 8px;
+    background-color: #eef2ff;
+    border: 1px solid #c7d2fe;
+    color: #3730a3;
+    padding: 16px 20px;
+    border-radius: 10px;
     font-size: 14px;
     margin-bottom: 25px;
     line-height: 1.5;
 }
 
 .notice-banner strong {
-    color: #174ea6;
+    color: #1e1b4b;
 }
 
 .demo-form {
@@ -325,15 +406,16 @@ a:hover {
 }
 
 .demo-fieldset {
-    border: 1px solid #dadce0;
-    border-radius: 8px;
-    padding: 20px;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 24px;
     background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
 }
 
 .demo-fieldset legend {
-    font-weight: bold;
-    color: #202124;
+    font-weight: 700;
+    color: #4f46e5;
     padding: 0 10px;
     font-size: 15px;
 }
@@ -341,7 +423,7 @@ a:hover {
 .form-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 16px;
+    gap: 18px;
     margin-top: 10px;
 }
 
@@ -353,46 +435,51 @@ a:hover {
 
 .form-group label {
     font-size: 13px;
-    font-weight: 500;
-    color: #3c4043;
+    font-weight: 600;
+    color: #334155;
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
-    padding: 8px 10px;
-    border: 1px solid #dadce0;
-    border-radius: 4px;
+    padding: 10px 12px;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 6px;
     font-size: 14px;
     font-family: inherit;
     outline: none;
-    transition: border-color 0.2s ease;
+    transition: all 0.2s ease;
+    background-color: #ffffff;
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-    border-color: #1a73e8;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
 }
 
 .options-group {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
     margin-top: 6px;
 }
 
 .option-item {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     font-size: 14px;
-    color: #3c4043;
+    color: #334155;
     cursor: pointer;
 }
 
 .option-item input {
     cursor: pointer;
+    accent-color: #4f46e5;
+    width: 16px;
+    height: 16px;
 }
 
 .range-display {
@@ -401,106 +488,121 @@ a:hover {
     gap: 12px;
 }
 
+.range-display input[type="range"] {
+    accent-color: #4f46e5;
+}
+
 .demo-buttons-group {
     display: flex;
-    gap: 12px;
-    margin-top: 10px;
+    gap: 14px;
+    margin-top: 15px;
     flex-wrap: wrap;
 }
 
 .demo-btn {
-    padding: 8px 18px;
-    border-radius: 4px;
+    padding: 10px 20px;
+    border-radius: 6px;
     font-size: 14px;
+    font-weight: 600;
     cursor: pointer;
     font-family: inherit;
-    border: 1px solid transparent;
+    border: none;
+    transition: all 0.2s ease;
 }
 
 .demo-btn-primary {
-    background-color: #1a73e8;
+    background: linear-gradient(135deg, #4f46e5, #6366f1);
     color: #ffffff;
+    box-shadow: 0 2px 6px rgba(79, 70, 229, 0.25);
 }
 
 .demo-btn-primary:hover {
-    background-color: #1557b0;
+    background: linear-gradient(135deg, #4338ca, #4f46e5);
 }
 
 .demo-btn-secondary {
-    background-color: #f1f3f4;
-    color: #3c4043;
-    border-color: #dadce0;
+    background-color: #f1f5f9;
+    color: #334155;
+    border: 1px solid #cbd5e1;
 }
 
 .demo-btn-secondary:hover {
-    background-color: #e8eaed;
+    background-color: #e2e8f0;
 }
 
 /* --- Zápatí (Footer) --- */
 .footer {
-    background-color: #f2f2f2;
-    border-top: 1px solid #dadce0;
+    background-color: #ffffff;
+    border-top: 1px solid #e2e8f0;
     font-size: 13px;
-    color: #70757a;
+    color: #64748b;
     margin-top: auto;
 }
 
 .footer-top {
-    padding: 12px 24px;
-    border-bottom: 1px solid #dadce0;
+    padding: 14px 32px;
+    border-bottom: 1px solid #f1f5f9;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .footer-bottom {
-    padding: 12px 24px;
+    padding: 14px 32px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 14px;
 }
 
 .footer-links {
     display: flex;
-    gap: 20px;
+    gap: 22px;
     flex-wrap: wrap;
     list-style: none;
 }
 
 .footer-links a {
-    color: #70757a;
+    color: #475569;
+    text-decoration: none;
+    font-weight: 500;
 }
 
 .footer-links a:hover {
-    color: #202124;
+    color: #4f46e5;
     text-decoration: underline;
 }
 
-/* Zvýrazněné odkazy v patičce na validátory */
+/* Zvýrazněné badge v patičce na validátory */
 .badge-val {
     display: inline-block;
-    padding: 2px 6px;
-    background-color: #e8eaed;
-    border-radius: 3px;
+    padding: 2px 7px;
+    background-color: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
     font-size: 11px;
-    font-weight: bold;
-    color: #3c4043;
-    margin-left: 3px;
+    font-weight: 700;
+    color: #4f46e5;
+    margin-left: 4px;
 }
 
 /* --- Responzivní přizpůsobení --- */
 @media (max-width: 768px) {
     .header-nav {
-        gap: 12px;
-        padding: 12px 16px;
+        gap: 10px;
+        padding: 14px 18px;
+        flex-wrap: wrap;
+    }
+
+    .brand-name {
+        font-size: 42px;
     }
 
     .form-row {
         flex-direction: column;
         align-items: flex-start;
-        gap: 6px;
+        gap: 8px;
     }
 
     .form-label,
@@ -512,8 +614,10 @@ a:hover {
         margin-left: 0;
     }
 
-    .footer-bottom {
+    .footer-bottom,
+    .footer-top {
         flex-direction: column;
         align-items: flex-start;
+        gap: 10px;
     }
 }

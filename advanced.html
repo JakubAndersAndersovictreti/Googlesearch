@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Pokročilé vyhledávání</title>
+    <title>Andems Pokročilé vyhledávání</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,88 +11,92 @@
     <!-- Horní lišta s logem a navigací -->
     <header class="advanced-header">
         <div class="logo-small">
-            <a href="index.html">
-                <img src="googlelogo.png" alt="Google logo">
+            <a href="index.html" class="brand-link">
+                <span class="brand-name small">Andems</span>
+                <span class="brand-badge brand-badge-purple">Advanced</span>
             </a>
         </div>
         <nav class="header-nav">
-            <a href="index.html">Vyhledávání Google</a>
+            <a href="index.html">Vyhledávání Andems</a>
             <a href="images.html">Obrázky</a>
             <a href="forms.html">Formuláře</a>
-            <a href="https://jakubandersandersovictreti.github.io/portfolio/" target="_blank" rel="noopener">Portfolio</a>
+            <a href="https://jakubandersandersovictreti.github.io/andersovicportfolio/" target="_blank" rel="noopener" class="nav-portfolio-link">Portfolio</a>
         </nav>
     </header>
 
     <!-- Hlavní obsah pokročilého vyhledávání -->
     <main class="advanced-container">
-        <h1 class="advanced-title">Pokročilé vyhledávání</h1>
+        <div class="advanced-card">
+            <h1 class="advanced-title">Pokročilé vyhledávání Andems</h1>
+            <p class="advanced-subtitle">Přesně specifikujte parametry vyhledávání pro nalezení požadovaných výsledků.</p>
 
-        <form class="advanced-form" action="https://www.google.com/search" method="get">
-            <h2 class="advanced-section-heading">Najít stránky obsahující...</h2>
+            <form class="advanced-form" action="https://www.google.com/search" method="get">
+                <h2 class="advanced-section-heading">Najít stránky obsahující...</h2>
 
-            <!-- 1. Všechna tato slova (as_q) -->
-            <div class="form-row">
-                <label for="as_q" class="form-label">všechna tato slova:</label>
-                <div class="form-input-container">
-                    <input type="text" id="as_q" name="as_q" class="advanced-text-input">
+                <!-- 1. Všechna tato slova (as_q) -->
+                <div class="form-row">
+                    <label for="as_q" class="form-label">všechna tato slova:</label>
+                    <div class="form-input-container">
+                        <input type="text" id="as_q" name="as_q" class="advanced-text-input">
+                    </div>
+                    <div class="form-hint">
+                        Zadejte nejdůležitější slova: například <code>tříkolové terénní kolo</code>
+                    </div>
                 </div>
-                <div class="form-hint">
-                    Zadejte nejdůležitější slova: například <code>tříkolové terénní kolo</code>
-                </div>
-            </div>
 
-            <!-- 2. Přesně toto slovo nebo frázi (as_epq) -->
-            <div class="form-row">
-                <label for="as_epq" class="form-label">přesně toto slovo nebo frázi:</label>
-                <div class="form-input-container">
-                    <input type="text" id="as_epq" name="as_epq" class="advanced-text-input">
+                <!-- 2. Přesně toto slovo nebo frázi (as_epq) -->
+                <div class="form-row">
+                    <label for="as_epq" class="form-label">přesně toto slovo nebo frázi:</label>
+                    <div class="form-input-container">
+                        <input type="text" id="as_epq" name="as_epq" class="advanced-text-input">
+                    </div>
+                    <div class="form-hint">
+                        Přesná slova dejte do uvozovek: například <code>"terénní kolo"</code>
+                    </div>
                 </div>
-                <div class="form-hint">
-                    Přesná slova dejte do uvozovek: například <code>"terénní kolo"</code>
-                </div>
-            </div>
 
-            <!-- 3. Libovolné z těchto slov (as_oq) -->
-            <div class="form-row">
-                <label for="as_oq" class="form-label">libovolné z těchto slov:</label>
-                <div class="form-input-container">
-                    <input type="text" id="as_oq" name="as_oq" class="advanced-text-input">
+                <!-- 3. Libovolné z těchto slov (as_oq) -->
+                <div class="form-row">
+                    <label for="as_oq" class="form-label">libovolné z těchto slov:</label>
+                    <div class="form-input-container">
+                        <input type="text" id="as_oq" name="as_oq" class="advanced-text-input">
+                    </div>
+                    <div class="form-hint">
+                        Mezi slova vložte OR: například <code>horské OR silniční</code>
+                    </div>
                 </div>
-                <div class="form-hint">
-                    Mezi slova vložte OR: například <code>horské OR silniční</code>
-                </div>
-            </div>
 
-            <!-- 4. Žádné z těchto slov (as_eq) -->
-            <div class="form-row">
-                <label for="as_eq" class="form-label">žádné z těchto slov:</label>
-                <div class="form-input-container">
-                    <input type="text" id="as_eq" name="as_eq" class="advanced-text-input">
+                <!-- 4. Žádné z těchto slov (as_eq) -->
+                <div class="form-row">
+                    <label for="as_eq" class="form-label">žádné z těchto slov:</label>
+                    <div class="form-input-container">
+                        <input type="text" id="as_eq" name="as_eq" class="advanced-text-input">
+                    </div>
+                    <div class="form-hint">
+                        Před slova, která nechcete, dejte znaménko minus: například <code>-dětské</code>
+                    </div>
                 </div>
-                <div class="form-hint">
-                    Před slova, která nechcete, dejte znaménko minus: například <code>-dětské</code>
-                </div>
-            </div>
 
-            <!-- Odesílací modré tlačítko -->
-            <div class="advanced-btn-row">
-                <input type="submit" value="Pokročilé vyhledávání" class="btn-advanced-submit">
-            </div>
-        </form>
+                <!-- Odesílací tlačítko -->
+                <div class="advanced-btn-row">
+                    <input type="submit" value="Pokročilé vyhledávání" class="btn-advanced-submit">
+                </div>
+            </form>
+        </div>
     </main>
 
     <!-- Zápatí stránky s povinnými odkazy a validací -->
     <footer class="footer">
         <div class="footer-top">
             <span>Česká republika</span>
-            <span>Google Pokročilé vyhledávání (PVA &amp; CS50)</span>
+            <span>Andems Pokročilé vyhledávání (PVA &amp; CS50)</span>
         </div>
         <div class="footer-bottom">
             <ul class="footer-links">
                 <li><a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fjakubandersandersovictreti.github.io%2FGooglesearch%2Fadvanced.html" target="_blank" rel="noopener">Validace HTML <span class="badge-val">W3C</span></a></li>
                 <li><a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjakubandersandersovictreti.github.io%2FGooglesearch%2Fstyle.css" target="_blank" rel="noopener">Validace CSS <span class="badge-val">W3C</span></a></li>
                 <li><a href="https://github.com/JakubAndersAndersovictreti/Googlesearch/blob/main/citace.md" target="_blank" rel="noopener">Citace a zdroje</a></li>
-                <li><a href="https://jakubandersandersovictreti.github.io/portfolio/" target="_blank" rel="noopener">Portfolio</a></li>
+                <li><a href="https://jakubandersandersovictreti.github.io/andersovicportfolio/" target="_blank" rel="noopener">Portfolio</a></li>
                 <li><a href="forms.html">Přehled formulářů</a></li>
             </ul>
             <span>Autor: Jakub Anders</span>

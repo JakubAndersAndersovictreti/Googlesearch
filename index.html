@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google</title>
+    <title>Andems Search</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,15 +14,18 @@
             <a href="images.html">Obrázky</a>
             <a href="advanced.html">Pokročilé hledání</a>
             <a href="forms.html">Formuláře</a>
-            <a href="https://jakubandersandersovictreti.github.io/portfolio/" target="_blank" rel="noopener">Portfolio</a>
+            <a href="https://jakubandersandersovictreti.github.io/andersovicportfolio/" target="_blank" rel="noopener" class="nav-portfolio-link">Portfolio</a>
         </nav>
     </header>
 
     <!-- Hlavní vyhledávací sekce -->
     <main class="main-search-container">
-        <!-- Logo Google -->
+        <!-- Vlastní logo Andems Search -->
         <div class="logo-container">
-            <img src="googlelogo.png" alt="Google logo">
+            <a href="index.html" class="brand-link">
+                <span class="brand-name">Andems</span>
+                <span class="brand-badge">Search</span>
+            </a>
         </div>
 
         <!-- Formulář vyhledávání -->
@@ -32,13 +35,13 @@
                 <svg class="search-icon" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
                 </svg>
-                <input type="text" name="q" class="search-input" aria-label="Hledat" autofocus required>
+                <input type="text" name="q" class="search-input" placeholder="Zadejte hledaný dotaz..." aria-label="Hledat" autofocus required>
             </div>
 
-            <!-- Tlačítka pro odeslání -->
+            <!-- Tlačítka pro odeslání (Andems Search a I'm Feeling Lucky) -->
             <div class="buttons-group">
-                <input type="submit" value="Google Search" class="search-btn">
-                <input type="submit" name="btnI" value="I'm Feeling Lucky" class="search-btn">
+                <input type="submit" value="Andems Search" class="search-btn search-btn-primary">
+                <input type="submit" name="btnI" value="I'm Feeling Lucky" class="search-btn search-btn-secondary">
             </div>
         </form>
     </main>
@@ -47,14 +50,14 @@
     <footer class="footer">
         <div class="footer-top">
             <span>Česká republika</span>
-            <span>Projekt Google Search (PVA &amp; CS50)</span>
+            <span>Andems Search Engine (PVA &amp; CS50)</span>
         </div>
         <div class="footer-bottom">
             <ul class="footer-links">
                 <li><a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fjakubandersandersovictreti.github.io%2FGooglesearch%2Findex.html" target="_blank" rel="noopener">Validace HTML <span class="badge-val">W3C</span></a></li>
                 <li><a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjakubandersandersovictreti.github.io%2FGooglesearch%2Fstyle.css" target="_blank" rel="noopener">Validace CSS <span class="badge-val">W3C</span></a></li>
                 <li><a href="https://github.com/JakubAndersAndersovictreti/Googlesearch/blob/main/citace.md" target="_blank" rel="noopener">Citace a zdroje</a></li>
-                <li><a href="https://jakubandersandersovictreti.github.io/portfolio/" target="_blank" rel="noopener">Portfolio</a></li>
+                <li><a href="https://jakubandersandersovictreti.github.io/andersovicportfolio/" target="_blank" rel="noopener">Portfolio</a></li>
                 <li><a href="forms.html">Přehled formulářů</a></li>
             </ul>
             <span>Autor: Jakub Anders</span>

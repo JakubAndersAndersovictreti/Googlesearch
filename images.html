@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Obrázky</title>
+    <title>Andems Obrázky</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,26 +11,26 @@
     <!-- Horní navigační lišta -->
     <header>
         <nav class="header-nav">
-            <a href="index.html">Vyhledávání Google</a>
+            <a href="index.html">Vyhledávání Andems</a>
             <a href="advanced.html">Pokročilé hledání</a>
             <a href="forms.html">Formuláře</a>
-            <a href="https://jakubandersandersovictreti.github.io/portfolio/" target="_blank" rel="noopener">Portfolio</a>
+            <a href="https://jakubandersandersovictreti.github.io/andersovicportfolio/" target="_blank" rel="noopener" class="nav-portfolio-link">Portfolio</a>
         </nav>
     </header>
 
     <!-- Hlavní vyhledávací sekce pro obrázky -->
     <main class="main-search-container">
-        <!-- Logo Google s popiskem obrázky -->
+        <!-- Logo Andems s odznakem Obrázky -->
         <div class="logo-container">
-            <a href="index.html">
-                <img src="googlelogo.png" alt="Google logo">
+            <a href="index.html" class="brand-link">
+                <span class="brand-name">Andems</span>
+                <span class="brand-badge brand-badge-orange">Obrázky</span>
             </a>
-            <span class="logo-subscript">obrázky</span>
         </div>
 
         <!-- Formulář vyhledávání obrázků -->
         <form class="search-form" action="https://www.google.com/search" method="get">
-            <!-- Skrytý parametr pro vyhledávání obrázků v Google (tbm=isch) -->
+            <!-- Skrytý parametr pro vyhledávání obrázků (tbm=isch) -->
             <input type="hidden" name="tbm" value="isch">
 
             <div class="search-bar-wrapper">
@@ -38,12 +38,12 @@
                 <svg class="search-icon" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
                 </svg>
-                <input type="text" name="q" class="search-input" aria-label="Hledat obrázky" autofocus required>
+                <input type="text" name="q" class="search-input" placeholder="Hledat obrázky..." aria-label="Hledat obrázky" autofocus required>
             </div>
 
             <!-- Tlačítko pro odeslání -->
             <div class="buttons-group">
-                <input type="submit" value="Hledat obrázky" class="search-btn">
+                <input type="submit" value="Hledat obrázky" class="search-btn search-btn-primary">
             </div>
         </form>
     </main>
@@ -52,14 +52,14 @@
     <footer class="footer">
         <div class="footer-top">
             <span>Česká republika</span>
-            <span>Google Obrázky (PVA &amp; CS50)</span>
+            <span>Andems Obrázky (PVA &amp; CS50)</span>
         </div>
         <div class="footer-bottom">
             <ul class="footer-links">
                 <li><a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fjakubandersandersovictreti.github.io%2FGooglesearch%2Fimages.html" target="_blank" rel="noopener">Validace HTML <span class="badge-val">W3C</span></a></li>
                 <li><a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjakubandersandersovictreti.github.io%2FGooglesearch%2Fstyle.css" target="_blank" rel="noopener">Validace CSS <span class="badge-val">W3C</span></a></li>
                 <li><a href="https://github.com/JakubAndersAndersovictreti/Googlesearch/blob/main/citace.md" target="_blank" rel="noopener">Citace a zdroje</a></li>
-                <li><a href="https://jakubandersandersovictreti.github.io/portfolio/" target="_blank" rel="noopener">Portfolio</a></li>
+                <li><a href="https://jakubandersandersovictreti.github.io/andersovicportfolio/" target="_blank" rel="noopener">Portfolio</a></li>
                 <li><a href="forms.html">Přehled formulářů</a></li>
             </ul>
             <span>Autor: Jakub Anders</span>
